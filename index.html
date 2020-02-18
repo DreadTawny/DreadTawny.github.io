@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="script.js" defer>
+
+        </script>
+        <meta charset="UTF-8">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                border: 1px solid black;
+            }
+            .main {
+                height: 100vh;
+                width: 100vw;
+                display:flex;
+                flex-direction: column;
+            }
+            .top {
+                flex-basis: 80vh;
+                display: flex;
+                flex-direction: row;
+            }
+            .colLeft {
+                flex-basis: 20vw;
+            }
+            .colRight {
+                flex: 1;
+            }
+            .bot {
+                flex: 1;
+            }
+            #results {
+                width: 50%;
+                border: none;
+            }
+            #info {
+                width: 40%;
+                float: right;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="top">
+                <div class="colLeft">
+                    <h2>
+                        MENU
+                    </h2>
+                </div>
+                <div class="colRight">
+                    <div>
+                        <input type="text" id="avgPage"/>
+                        <p>Podaj średnie zużycie tuszu(średnia ilość stron na toner)</p>
+                    </div>
+                   <div>
+                        <input type="text" id="pricePage"/>
+                        <p>Podaj cenę za ryzę papieru. Poprawny format to x.xx(e,z,$)</p>
+                   </div>
+                   <div>
+                        <input type="text" id="priceInk"/>  
+                        <p>Podaj cenę za toner. Poprawny format to x.xx(e,z,$)</p>
+                   </div>
+                    <div>
+                        <input type="text" id="printTimer"/>
+                        <p>Podaj średni czas wydruku strony (w milisekundach)</p>
+                    </div>
+                    <input type="button" onclick="new Printer()" value="start"/>
+                    <input type="button" id="stop" value="Stop"/>
+                    <div id="info">
+                        <h2>Kurs walut</h2>
+                        <table>
+                            <tr>
+                                <td>Waluta</td>
+                                <td>Cena (w zł)</td>
+                            </tr>
+                            <tr>
+                                <td>Euro</td>
+                                <td>4,25</td>
+                            </tr>
+                            <tr>
+                                <td>Dolar</td>
+                                <td>3,92</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="results">
+                    <p id="pageLeft"></p>
+                    <p id="inkLeft"></p>
+                    <p id="costEuro"></p>
+                    <p id="cost$"></p>
+                    <p id="costZl"></p>
+                    <p id="pagesUsed"></p>
+                    <p id="inkUsed"></p>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+            <div class="bot"></div>
+        </div>
+    </body>
+</html>
