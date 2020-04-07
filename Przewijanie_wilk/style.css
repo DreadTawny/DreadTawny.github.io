@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+div {
+    border: 1px solid black;
+    border-top: none;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+#main-flex {
+    display: flex;
+    flex-direction: column;
+    height: 250vh;
+}
+#header {
+    height: 10vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: rgb(92, 145, 7);
+    opacity: 0.1;
+    text-align: center;
+    font-size: 3em;
+}
+#body-flex {
+    margin-top: 10vh;
+    flex: 15;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(32, 70, 106,0.4);
+}
+#colLeft {
+    padding-top: 30vh;
+    flex: 1;
+}
+#sidebar {
+    position:fixed;
+    top: 40vh;
+    left: 1vw;
+    border: none;
+}
+#sidebar h2 {
+    text-align: center;
+    border-radius: 15px;
+    background-color: rgb(0,150,255)
+}
+#sidebar h2:hover {
+    background-color: rgb(0,255,255)
+}
+#colCenter {
+    flex: 10;
+    margin-right: 10vw;
+}
+#form {
+    margin-bottom: 75vh;
+}
+table {
+    border: 1px solid black;
+    width: 100%;
+    border-collapse: collapse;
+    border-left: none;
+    border-right: none;
+}
+table  tr  td {
+    width: 30%;
+    border: 1px solid black;
+    text-align: center;
+}
+table tr > td {
+    border-left: none;
+}
+table tr td:last-child {
+    border-right: none;
+}
+#colRight {
+    width: 10vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+}
+#colRight > #upper-flex {
+    display: flex;
+    flex-direction: row;
+    flex: 4;
+    border-left: none;
+    border-bottom: none;
+    border: none;
+}
+#colRigh > #upper-flex > div {
+    flex:3;
+    border-left: none;
+    border-bottom: none;
+}
+#colRight > #upper-flex > #scroll {
+    flex: 1;
+    border-bottom: none;
+}
+#colRight > #middle-flex, #colRight>#middle-flex div {
+    flex: 1;
+    border: none;
+}
+#colRight > #lower-flex {
+    flex: 1;
+    border: none;
+}
+#colRight > #lower-flex > #formStatus {
+    font-weight: 900;
+}
+#footer-flex {
+    flex: 1;
+    background-color: rgba(0,100,0,0.4);
+    text-align: center;
+}
